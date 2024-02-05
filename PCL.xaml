@@ -1,0 +1,52 @@
+<!-- 你可以使用 Ctrl + F 快速查找。例如，若需要改变文本颜色，则搜索 “颜色” 即可。 -->
+
+<local:MyHint Margin="0,0,0,15" Text="欢迎来到 MC-Schale 服务器！" IsWarn="False" />
+
+<local:MyCard Title="启动游戏" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+    <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
+        Text="启动 1.20.1 并进入 MC-Schale 服务器" EventType="启动游戏" EventData="1.20.1|frp.xiaowuap.com:43262" ToolTip="服务器 IP：frp.xiaowuap.com:43262" />
+<!--     <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
+        Text="打开 服务器官网" EventType="打开网页" EventData="https://mc-schale-server.github.io/" /> -->
+    <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
+            Text="打开 服务器资源包新构建库" EventType="打开网页" EventData="https://github.com/MC-Schale-Server/Resource-packs" />
+    <local:MyButton Margin="0,5,0,0" Width="250" Height="35"
+        Text="切换到启动器设置" EventType="切换页面" EventData="3|2"/>
+
+    <TextBlock Margin="10,6,0,5" Foreground="{DynamicResource ColorBrush3}"
+            Text="你知道吗：{hint}" />
+
+    <!-- 这是第一行
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="打开 服务器官网" EventType="打开网页" EventData="https://mc-schale-server.github.io/" />
+        <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+            Text="切换到启动器设置" EventType="切换页面" EventData="3|2"/>
+
+        </StackPanel>
+    -->
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="MC-Schale 服务器公告 (JE) [2/5修]" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+            Text="服务端版本：1.20.1" />
+        <TextBlock Margin="0,0,0,4"
+            Text="客户端版本：1.11~1.20.4" />
+        <TextBlock Margin="0,0,0,4"
+            Text="正版验证：开启" />
+        <TextBlock Margin="0,0,0,4"
+            Text="服务器IP：" />
+        <TextBlock Margin="0,0,0,4"
+            Text="play1.mc-schale.com" />
+        <TextBlock Margin="0,0,0,4"
+            Text="play2.mc-schale.com" />
+        <TextBlock Margin="0,0,0,4"
+            Text="服务器规则更改：" />
+        <TextBlock Margin="0,0,0,4"
+            Text="生物破坏已开" />
+        <TextBlock Margin="0,0,0,4"
+            Text="服务器主群：693856047" />
+    </StackPanel>
+</local:MyCard>
