@@ -1,0 +1,20 @@
+.nextaudio {
+    position: relative;
+    background-color: transparent
+}
+
+#next-song {
+    background-color: transparent;
+    border: none;
+  }
+
+  #prev-song {
+    background-color: transparent;
+    border: none;
+  }
+
+  #audio-control {
+    background-color: transparent;
+    border: none;
+  }
+
