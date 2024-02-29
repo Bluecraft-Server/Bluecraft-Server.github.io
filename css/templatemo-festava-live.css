@@ -481,7 +481,7 @@ strong {
 }
 
 .hero-section small {
-  color: var(--white-color);
+  color: rgb(95, 94, 94);
   text-transform: uppercase;
 }
 

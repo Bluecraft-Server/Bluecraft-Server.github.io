@@ -9101,7 +9101,7 @@ fieldset:disabled .btn {
 
 .text-white {
     --bs-text-opacity: 1;
-    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+    color: rgb(95, 94, 94) !important
 }
 
 .text-body {
