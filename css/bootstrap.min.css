@@ -9101,12 +9101,21 @@ fieldset:disabled .btn {
 
 .text-white {
     --bs-text-opacity: 1;
-    color: rgb(95, 94, 94) !important
+    color: rgb(255, 255, 255) !important
+}
+
+.guanyutext {
+    --bs-text-opacity: 1;
+    color: rgb(0, 0, 0) !important
 }
 
 .text-body {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important
+}
+
+.P2Ptext {
+    font-size: 30px;
 }
 
 .text-muted {

@@ -17,8 +17,8 @@ https://templatemo.com/tm-583-festava-live
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #0d6efd;
   --custom-btn-bg-hover-color:    #084298;
-  --dark-color:                   #c4c4c4;
-  --p-color:                      #717275;
+  --dark-color:                   #000000;
+  --p-color:                      #3a3a3a;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
@@ -481,7 +481,7 @@ strong {
 }
 
 .hero-section small {
-  color: rgb(95, 94, 94);
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
 
@@ -507,6 +507,7 @@ strong {
 -----------------------------------------*/
 .about-section {
   background-image: url('../images/edward-unsplash-blur.jpg');
+  background-size: cover;
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
@@ -681,7 +682,7 @@ strong {
 }
 
 .schedule-table thead th {
-  border-right: 1px solid #c7460a;
+  border-right: 1px solid #084298;
   border-bottom-color: transparent;
 }
 
@@ -749,9 +750,10 @@ strong {
 }
 
 .pricing-tag {
-  background-color: var(--secondary-color);
+  background-color: rgba(109, 109, 109, 0.3);
+  background-size: cover;
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: #00ff00;
   font-weight: var(--font-weight-bold);
   text-align: center;
   display: flex;
