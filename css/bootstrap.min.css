@@ -706,7 +706,7 @@ progress {
     .container-lg,
     .container-md,
     .container-sm {
-        max-width: 960px
+        max-width: 1000px
     }
 }
 
@@ -1455,7 +1455,7 @@ progress {
 
     .col-lg-5 {
         flex: 0 0 auto;
-        width: 41.66666667%
+        width: 22.666667%
     }
 
     .col-lg-6 {
@@ -4355,7 +4355,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand img {
-  width: 50%;
+  width: 30%;
   height: auto;
 }
 

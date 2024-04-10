@@ -385,7 +385,7 @@ strong {
 .navbar-expand-lg .navbar-nav .nav-link {
   border-radius: var(--border-radius-large);
   margin: 10px;
-  padding: 10px 20px;
+  padding: 10px 1px;
 }
 
 .navbar-nav .nav-link {
@@ -610,8 +610,9 @@ strong {
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(1px) saturate(180%);
   -webkit-backdrop-filter: blur(1px) saturate(180%);
-  margin: 20px;
-  padding: 35px;
+  margin: 12px;
+  padding: 14px;
+  height: 178px;
   opacity: 0;
   transition: all 0.6s ease;
   transform: translateY(100%);
