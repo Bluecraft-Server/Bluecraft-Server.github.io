@@ -1455,7 +1455,7 @@ progress {
 
     .col-lg-5 {
         flex: 0 0 auto;
-        width: 22.666667%
+        width: 18.666667%
     }
 
     .col-lg-6 {
@@ -4340,9 +4340,9 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand {
-    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-top: -100px;
     padding-bottom: var(--bs-navbar-brand-padding-y);
-    margin-right: var(--bs-navbar-brand-margin-end);
+    margin-right: -400px;
     font-size: var(--bs-navbar-brand-font-size);
     color: var(--bs-navbar-brand-color);
     text-decoration: none;
@@ -4355,7 +4355,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand img {
-  width: 30%;
+  width: 25%;
   height: auto;
 }
 
