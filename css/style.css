@@ -18,3 +18,10 @@
     border: none;
   }
 
+/* 当屏幕宽度小于等于767px（移动设备）时，强制使.col-12变成双列布局 */
+@media (max-width: 767px) {
+  .artists-section .row > .col-12 {
+      flex: 0 0 50%; /* 设置为占50%宽度 */
+      max-width: 50%;
+  }
+}
