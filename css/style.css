@@ -25,3 +25,9 @@
       max-width: 50%;
   }
 }
+
+.logo-image {
+  height: auto;
+  max-height: 50px;
+  width: 100%;
+}
