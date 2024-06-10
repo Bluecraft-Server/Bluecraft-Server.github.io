@@ -32,10 +32,30 @@
 		});
 		</script>
 	</head>
+
+	<style>
+		.hidden-video {
+		  display: none; /* 隐藏视频元素 */
+		}
+		</style>
+		<script>
+		function playVideoSound() {
+		  var videoElement = document.getElementById('hiddenVideo');
+		  if (videoElement.paused || videoElement.ended) {
+			videoElement.currentTime = 0; // 重置播放时间以便重新播放
+			videoElement.play(); // 播放视频
+		  } else {
+			videoElement.pause(); // 如果已经在播放，则暂停
+		  }
+		}
+		</script>
 	<body>
 		
-		<div class="logo" id="a" onclick="a();" title="点击我有惊喜！">
+		<div class="logo" id="a" onclick="playVideoSound();" title="点击我有惊喜！">
 				<img src="./images/wuwu.png">
+				<!-- 隐藏的视频元素 -->
+                <video id="hiddenVideo" class="hidden-video" src="/video/easteregg.mp4" preload="auto"></video>
+
 			</div>
 			<br /><br />
 			<div class="container">
@@ -47,8 +67,7 @@
 	</div>
 	</div>
 	<div class="body_buttom">
-		
-			
+
 <audio autoplay loop id="music">
 <source src="music/music.mp3" type="audio/mpeg">
 </audio>
