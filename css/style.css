@@ -32,121 +32,109 @@
   width: 100%;
 } */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400');
-
-html, body {
-    width: 100%;
-    height: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-
-a{
-  text-decoration: none;
-}
-
 body {
-    background-color: #36BEA6;
+  margin:0;
+  padding:0;
+  background: #303030;
 }
 
-.share__icon {
-    width: 32px;
-    height: 32px;
-    fill: #fff;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 3px;
-}
-.share__icon:last-of-type{
-   margin-right: 0px;
+.middle {
+  margin:0;
+  padding:0;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
 }
 
-.share-button {
-  cursor: pointer;
-    display: inline-block;
-    height:42px;
-    position: absolute;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-   -moz-transform: translateY(-50%) translateX(-50%);
-    left: 50%;
-  -webkit-perspective: 200px;
-  -moz-perspective: 200px;
-  perspective: 200px;
-  
-}
-
-.share-button__back {
-    background-color: #368b8b;
-    padding: 5px;
-    border-radius: 20px;
+.btg {
+  display:inline-block;
+  width:60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow:-5px 5px 15px -5px #f1f1f1; 
   overflow: hidden;
-  box-shadow: 0px 0px 14px rgba(0,0,0,0.1) inset;
+  position: relative;
+  transition: 0.3s linear;
 }
 
-.share-button__front {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: center top;
-    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+.btg i {
+  line-height: 60px;
+  font-size: 26px;
+  transition: 0.3s linear;
 }
 
-
-
-.share-button__text {
-    margin: 0;
-    line-height: 42px;
-    font-size: 16px;
-    text-align: center;
-    color: #b6b6b6;
+.btg:nth-child(1) i {
+  color:#3b5998;
 }
 
-.share__link {
-    position: relative;
-    top: 40px;
-    display: inline-block;
-    opacity: 0;
-  -webkit-transition: top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition: top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-transition: top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: top .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.btg:nth-child(2) i {
+  color:#1da1f2;
+}
 
+.btg:nth-child(3) i {
+  color:#c32aa3;
+}
+
+.btg:nth-child(4) i {
+  color:#db4437;
+}
+
+.btg:hover {
+  transform: scale(1.1);
+}
+
+.btg:hover i {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.btg:before {
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top:90%;
+}
+
+.btg:nth-child(1)::before {
+  background: #3b5998;
+}
+
+.btg:nth-child(2)::before {
+  background: #1da1f2;
+}
+
+.btg:nth-child(3)::before {
+  background: #c32aa3;
+}
+
+.btg:nth-child(4)::before {
+  background: #db4437;
+}
+
+.btg:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top:90%;
   }
-
-.share-button:hover .share-button__front {
-    transform: rotateX(90deg);
-}
-
-.share-button:hover .share__link {
-    top:0;
-  opacity: 1;
-}
-
-.share-button:hover .share__link:nth-of-type(1){
-  transition-delay:0.1s;
-}
-
-.share-button:hover .share__link:nth-of-type(2){
-  transition-delay:0.2s;
-}
-
-.share-button:hover .share__link:nth-of-type(3){
-  transition-delay:0.3s;
-}
-
-.share-button:hover .share__link:nth-of-type(4){
-  transition-delay:0.4s;
+  50% {
+    left:10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
 }
