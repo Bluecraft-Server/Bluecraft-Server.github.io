@@ -477,7 +477,7 @@ strong {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  height: calc(100vh - 5px);
+  height: calc(100vh - -15px);
   /* height: calc(100vh - 51px); */
 }
 
