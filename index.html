@@ -33,6 +33,7 @@
 https://templatemo.com/tm-583-festava-live
 
 -->
+
 </head>
 
 <body>
@@ -725,6 +726,25 @@ https://templatemo.com/tm-583-festava-live
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        // 检测是否为PC端
+        function isPc() {
+          const userAgentInfo = navigator.userAgent;
+          const Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+          let flag = true;
+          for (let v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+          }
+          return flag;
+        }
+      
+        // 如果是PC端，则动态插入script标签
+        if (isPc()) {
+          const script = document.createElement('script');
+          script.src = 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js';
+          document.head.appendChild(script);
+        }
+      </script>
 </body>
 
 </html>
