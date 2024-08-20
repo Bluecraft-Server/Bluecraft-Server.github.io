@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>阿罗娜跟丢了!</title>
+		<meta name="description" content="Some ideas for modern button styles and effects" />
+		<meta name="keywords" content="button, effect, hover, style, inspiration, web design" />
+		<meta name="author" content="Codrops" />
+		<link href="img/15.0904011.ico" mce_href="favicon.ico" rel="shortcut icon" type="img/15.0904011.ico" />
+		<script type="text/javascript" src="js/404jquery.min.js"></script>
+		<script type="text/javascript" src="js/404jquery.beattext.js"></script>
+		<script type="text/javascript" src="js/404easying.js"></script>
+		
+		<link rel="stylesheet" href="css/404style.css" />
+		<link rel="stylesheet" href="css/404button.css" />
+		<link rel="stylesheet" href="css/reset.css"  />
+				  <script type="text/javascript">
+  		var system ={};  
+    	var p = navigator.platform;       
+        system.win = p.indexOf("Win") == 0;  
+        system.mac = p.indexOf("Mac") == 0;  
+       system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+       if(system.win||system.mac||system.xll){//如果是电脑跳转到
+               window.location.href="#";  
+       }else{  //如果是手机,跳转到
+              window.location.href="index.html";  
+        }
+ </script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		$('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
+		});
+		</script>
+	</head>
+
+	<style>
+		.hidden-video {
+		  display: none; /* 隐藏视频元素 */
+		}
+		</style>
+		<script>
+		function playVideoSound() {
+		  var videoElement = document.getElementById('hiddenVideo');
+		  if (videoElement.paused || videoElement.ended) {
+			videoElement.currentTime = 0; // 重置播放时间以便重新播放
+			videoElement.play(); // 播放视频
+		  } else {
+			videoElement.pause(); // 如果已经在播放，则暂停
+		  }
+		}
+		</script>
+	<body>
+		
+		<div class="logo" id="a" onclick="playVideoSound();" title="点击我有惊喜！">
+				<img src="./images/wuwu.png">
+				<!-- 隐藏的视频元素 -->
+                <video id="hiddenVideo" class="hidden-video" src="/video/easteregg.mp4" preload="auto"></video>
+
+			</div>
+			<br /><br />
+			<div class="container">
+		<p id="roloadText">404！对不起老师，阿罗娜找不到页面了！</p>
+	</div>
+
+		<div class="box bg-1">
+				<button class="button button--antiman button--round-l button--text-medium" onclick="window.open('./index.html')"><span>返回首页</span></button>
+	</div>
+	</div>
+	<div class="body_buttom">
+
+<audio autoplay loop id="music">
+<source src="music/music.mp3" type="audio/mpeg">
+</audio>
+<script>   
+   function a(){
+     var audio = document.getElementById('music'); 
+     if(audio.paused){                 
+         audio.play();//audio.play();// 播放  
+     }
+     else{
+          audio.pause();// 暂停
+     } 
+   }
+</script>
+	</body>
+</html>
