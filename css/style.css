@@ -26,17 +26,13 @@
   }
 }
 
-/* .logo-image {
+.logo-image {
   height: auto;
-  max-height: 50px;
+  max-height: 200px;
   width: 100%;
-} */
-
-body {
-  margin:0;
-  padding:0;
-  background: #303030;
 }
+
+
 
 .middle {
   margin:0;
@@ -68,7 +64,7 @@ body {
 }
 
 .btg:nth-child(1) i {
-  color:#3b5998;
+  color:#FFC0CB;
 }
 
 .btg:nth-child(2) i {
@@ -76,11 +72,11 @@ body {
 }
 
 .btg:nth-child(3) i {
-  color:#c32aa3;
+  color:#71f071
 }
 
 .btg:nth-child(4) i {
-  color:#db4437;
+  color:#00dbff
 }
 
 .btg:hover {
@@ -103,7 +99,7 @@ body {
 }
 
 .btg:nth-child(1)::before {
-  background: #3b5998;
+  background: #FFC0CB;
 }
 
 .btg:nth-child(2)::before {
@@ -111,11 +107,11 @@ body {
 }
 
 .btg:nth-child(3)::before {
-  background: #c32aa3;
+  background: #71f071
 }
 
 .btg:nth-child(4)::before {
-  background: #db4437;
+  background: #00dbff
 }
 
 .btg:hover::before {
