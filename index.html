@@ -226,12 +226,45 @@ https://templatemo.com/tm-583-festava-live
 
         <section class="slider bglunbo" id="section_3">
             <h2 class="text-center mb-4">玩家建筑</h2>
-            <div class="slides">
-              <img src="./images/nainoa-shizuru-unsplash-blur.jpg" alt="Image 1" class="slide-img">
-              <img src="./images/nextaudio.png" alt="Image 2" class="slide-img">
-              <img src="./images/xiao.jpg" alt="Image 3" class="slide-img">
-              <!-- 根据需要添加更多图片 -->
-            </div>
+            <div class="carousel auto-play">
+                <ul class="slides">
+                  <li id="slide-1" class="slide">
+                    <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" alt="img1" />
+                  </li>
+                  <li id="slide-2" class="slide">
+                    <img src="https://i.loli.net/2019/10/18/Ujf6n75o8TtIsWX.jpg" alt="img2" />
+                  </li>
+                  <li id="slide-3" class="slide">
+                    <img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" alt="img3" />
+                  </li>
+                  <li id="slide-4" class="slide">
+                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt="img4" />
+                  </li>
+                  <li id="slide-5" class="slide">
+                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" alt="img5" />
+                  </li>
+                  <li id="slide-6" class="slide">
+                    <img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" alt="img6" />
+                  </li>
+                  <li id="slide-7" class="slide">
+                    <img src="/images/jianzhu/6.png" alt="img6" />
+                  </li>
+                </ul>
+                <ul class="nav-dots">
+                  <li class="dot"><a href="#slide-1"></a></li>
+                  <li class="dot"><a href="#slide-2"></a></li>
+                  <li class="dot"><a href="#slide-3"></a></li>
+                  <li class="dot"><a href="#slide-4"></a></li>
+                  <li class="dot"><a href="#slide-5"></a></li>
+                  <li class="dot"><a href="#slide-6"></a></li>
+                  <li class="dot"><a href="#slide-7"></a></li>
+                </ul>
+                <ul class="nav-arrows">
+                  <li class="arrow-left"></li>
+                  <li class="arrow-right"></li>
+                </ul>
+              </div>
+              
           </section>
 
           <section class="artists-section section-padding" id="section_4">
@@ -704,7 +737,7 @@ https://templatemo.com/tm-583-festava-live
                     <h5 class="site-footer-title mb-3">联系我们？</h5>
 
                     <p class="text-white d-flex mb-1">
-                        <a href="tel: 181-6139-0703" class="site-footer-link">
+                        <a href="/404.html" class="site-footer-link">
                             181-6139-0703
                         </a>
                     </p>
@@ -782,6 +815,110 @@ https://templatemo.com/tm-583-festava-live
           script.src = 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js';
           document.head.appendChild(script);
         }
+      </script>
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const AUTO_PLAY_SECOND = 4000; // 自动播放的时间间隔，单位为毫秒
+    const carousel = document.querySelector('.carousel');
+    const slides = document.querySelector('.slides');
+    const slidesContainer = carousel.querySelector('.slides'); // 假设.carousel下有一个.slides的容器
+    const slideCount = slides.children.length;
+    const slideWidth = slidesContainer.children[0].clientWidth;
+    const autoPlayTimer = setInterval(() => {
+        if (slidesContainer.scrollLeft >= slideWidth * (slideCount - 1)) {
+            slidesContainer.scrollLeft = 0;
+        } else {
+            slidesContainer.scrollLeft += slideWidth;
+        }
+    }, AUTO_PLAY_SECOND);
+
+    // 设置当前激活的点
+    const setActiveDot = (index) => {
+        document.querySelectorAll('.dot').forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+        });
+    };
+
+    // 停止自动播放
+    const stopAutoPlay = () => {
+        clearInterval(autoPlayTimer);
+    };
+
+    // 恢复自动播放
+    const resumeAutoPlay = () => {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(() => {
+            scrollRight();
+        }, AUTO_PLAY_SECOND);
+    };
+
+    // 滚动到上一张幻灯片
+    const scrollLeft = () => {
+        let currentLeft = slidesContainer.scrollLeft;
+        if (currentLeft - slideWidth <= 0) {
+            slidesContainer.scrollLeft = slideWidth * (slideCount - 1);
+        } else {
+            slidesContainer.scrollLeft = currentLeft - slideWidth;
+        }
+        setActiveDot(slidesContainer.scrollLeft / slideWidth);
+    };
+
+    // 滚动到下一张幻灯片
+    const scrollRight = () => {
+        let currentLeft = slidesContainer.scrollLeft;
+        if (currentLeft + slideWidth >= slideWidth * slideCount) {
+            slidesContainer.scrollLeft = 0;
+        } else {
+            slidesContainer.scrollLeft = currentLeft + slideWidth;
+        }
+        setActiveDot(slidesContainer.scrollLeft / slideWidth);
+    };
+
+    // 触摸事件处理
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isScrolling = undefined; // Determine whether the user is scrolling
+
+    slidesContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        stopAutoPlay(); // 停止自动播放
+    });
+
+    slidesContainer.addEventListener('touchmove', (e) => {
+        e.preventDefault(); // 阻止默认滚动行为
+        touchEndX = e.touches[0].clientX;
+        isScrolling = Math.abs(touchEndX - touchStartX) > 10; // 如果滑动距离大于10px，则认为是滚动
+    });
+
+    slidesContainer.addEventListener('touchend', () => {
+        if (isScrolling) {
+            if (touchEndX > touchStartX) {
+                scrollLeft(); // 向右滑动，切换到上一张
+            } else {
+                scrollRight(); // 向左滑动，切换到下一张
+            }
+        }
+        resumeAutoPlay(); // 恢复自动播放
+    });
+
+    // 点状导航点击事件
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            slidesContainer.scrollLeft = index * slideWidth;
+            setActiveDot(index);
+            stopAutoPlay();
+        });
+    });
+
+    // 箭头按钮点击事件
+    const leftArrow = document.querySelector('.nav-arrows .arrow-left');
+    const rightArrow = document.querySelector('.nav-arrows .arrow-right');
+    leftArrow.addEventListener('click', scrollLeft);
+    rightArrow.addEventListener('click', scrollRight);
+
+    // 初始化设置
+    setActiveDot(0);
+});
       </script>
 </body>
 </html>
