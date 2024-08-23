@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // 初始音量设置为0，然后使用setTimeout逐渐增加音量
   music.volume = 0;
   setTimeout(function() {
-    music.volume = 1; // 假设你希望音量为1
+    music.volume = 0.4; // 假设你希望音量为1
   }, 500); // 1秒后音量增加到1
 
   // 检查音乐是否被暂停，如果是，则尝试重新播放
