@@ -72,11 +72,11 @@
 }
 
 .btg:nth-child(3) i {
-  color:#71f071
+  color:#00dbff
 }
 
 .btg:nth-child(4) i {
-  color:#00dbff
+  color:#0228ff
 }
 
 .btg:hover {
@@ -107,12 +107,13 @@
 }
 
 .btg:nth-child(3)::before {
-  background: #71f071
+  background: #00dbff
 }
 
 .btg:nth-child(4)::before {
-  background: #00dbff
+  background: #0228ff
 }
+
 
 .btg:hover::before {
   animation: aaa 0.7s 1;
