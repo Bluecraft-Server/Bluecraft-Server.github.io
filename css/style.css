@@ -40,9 +40,10 @@
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 98%;
   text-align: center;
 }
+
 
 .btg {
   display:inline-block;
