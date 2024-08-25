@@ -136,3 +136,8 @@
     top: -10%;
   }
 }
+
+.about-text-wrap iframe {
+  width: 100%;
+  height: 80%;
+}
