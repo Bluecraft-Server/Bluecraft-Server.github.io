@@ -8,6 +8,7 @@
 //                                                     
 //                                                                                                                                                    
 -->
+
 <!doctype html>
 <html lang="en">
 
@@ -146,12 +147,18 @@
                         </div>
 
                         <div class="social-share">
+                            <!-- 
+
+                                [MusicBtn] Start
+                                Powered by MZCompute GmbH. [wang@mingze.de], https://mingze.de/
+
+                            -->
                             <div class="nextaudio">
                                 <button id="prev-song">
-                                    <p class="btn custom-btn smoothscroll">上一首</p>
+                                    <img src="./images/music_prev.png" class="music-status" />
                                 </button>
                                 <button id="audio-control" data-hover-text="关闭背景音乐">
-                                    <p class="btn custom-btn smoothscroll">音乐</p>
+                                    <img src="./images/music_pause.png" id="music-status" class="music-status" />
                                 </button>
                                 <audio id="bg-music" preload="auto" ended>
                                     <source src="./audio/bangbangkabang.mp3">
@@ -159,10 +166,12 @@
                                     <source src="./audio/blessing.mp3">
                                 </audio>
                                 <button id="next-song">
-                                    <p class="btn custom-btn smoothscroll">下一首</p>
+                                    <img src="./images/music_next.png" class="music-status" />
                                 </button>
                             </div>
+                            <!-- [MusicBtn] End -->
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -215,7 +224,7 @@
         <section class="slider bglunbo" id="section_3">
             <h2 class="text-center mb-4">玩家建筑</h2>
             <div class="carousel auto-play">
-                <ul class="slides">
+                <ul class="slides pwdmzcomputegmbh-1">
                   <li id="slide-1" class="slide">
                     <img src="/images/jianzhu/1.png" alt="img1" />
                   </li>

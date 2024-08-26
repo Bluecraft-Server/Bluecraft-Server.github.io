@@ -134,3 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // 错误处理逻辑
     });
 });
+
+
+document.getElementById("bg-music").addEventListener('play',()=>{document.querySelector("#music-status").src="/images/music_play.png"});document.getElementById("bg-music").addEventListener('pause',()=>{document.querySelector("#music-status").src="/images/music_pause.png"});console.log("[MusicBtn] Init\nPowered by MZCompute GmbH [wang@mingze.de]")
