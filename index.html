@@ -206,6 +206,8 @@
                     <div class="col-lg-6 col-12">
                         <div class="about-text-wrap">
                             <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112881941087221&bvid=BV1PUvxefEEE&cid=500001633990608&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  
+
                 </div>
             </div>
         </section>
@@ -784,25 +786,6 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-        // 检测是否为PC端
-        function isPc() {
-          const userAgentInfo = navigator.userAgent;
-          const Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-          let flag = true;
-          for (let v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
-          }
-          return flag;
-        }
-      
-        // 如果是PC端，则动态插入script标签
-        if (isPc()) {
-          const script = document.createElement('script');
-          script.src = 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js';
-          document.head.appendChild(script);
-        }
-      </script>
       <script>
 document.addEventListener('DOMContentLoaded', function() {
     const AUTO_PLAY_SECOND = 4000; // 自动播放的时间间隔，单位为毫秒

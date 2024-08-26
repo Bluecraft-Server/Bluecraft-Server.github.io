@@ -522,8 +522,15 @@ strong {
 
 .about-text-wrap {
   position: relative;
-  width: 100%;
+  width: 110%;
   height: 150%;
+}
+
+@media (max-width: 768px) {
+  .about-text-wrap {
+    width: 100%; /* 在移动端使用100%宽度 */
+    height: 150%; /* 高度自动调整，保持原始宽高比 */
+  }
 }
 
 .about-text-icon {
