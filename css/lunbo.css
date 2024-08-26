@@ -135,7 +135,7 @@
 @media (max-width: 768px) {
   .carousel {
     width: 100%; /* 移动端全屏宽度 */
-    height: 40vh; /* 移动端高度调整为视窗高度的一半 */
+    height: 30vh; /* 移动端高度调整为视窗高度的一半 */
   }
 
   .carousel .slides {
