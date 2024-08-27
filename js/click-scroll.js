@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 初始音量设置
     music.volume = 0;
     setTimeout(function() {
-        music.volume = 0.4; // 设置初始音量
+        music.volume = 0.3; // 设置初始音量
     }, 500); // 1秒后音量增加到40%
   
     // 音乐播放/暂停切换
