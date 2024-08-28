@@ -1236,26 +1236,6 @@ if (refreshCount === 0) {
 }
       </script>
       <script>
-        function toggleDisplayOnPC() {
-  var element = document.querySelector('.visible-on-pc');
-  var isMobileWidth = window.innerWidth <= 767; // 你可以根据需要调整这个断点值
-
-  if (isMobileWidth) {
-    // 如果屏幕宽度是移动端宽度，隐藏元素
-    element.style.display = 'none';
-  } else {
-    // 如果屏幕宽度是PC端宽度，显示元素
-    element.style.display = 'block';
-  }
-}
-
-// 初始化函数调用
-toggleDisplayOnPC();
-
-// 监听窗口大小变化事件
-window.addEventListener('resize', toggleDisplayOnPC);
-      </script>
-      <script>
         // 获取ul元素
 const ulElement = document.querySelector('.player-list ul');
 

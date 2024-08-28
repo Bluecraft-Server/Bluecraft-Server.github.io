@@ -671,6 +671,13 @@ strong {
   background-color: #cccccc;
 }
 
+/* 响应式设计：移动端样式 */
+@media screen and (max-width: 768px) {
+  .player-list {
+    width: 1380%;
+  }
+}
+
 .player-list ul {
   list-style-type: none;
   padding: 0;
