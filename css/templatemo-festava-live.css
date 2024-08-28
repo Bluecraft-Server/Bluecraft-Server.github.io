@@ -651,6 +651,60 @@ strong {
   margin: 1.5rem 0;
 }
 
+/*---------------------------------------
+  PLAYER_LIST
+ ----------------------------------------*/
+
+/* 添加滚动动画 */
+@keyframes scroll {
+  0% { transform: translateX(10%); }
+  100% { transform: translateX(-100%); }
+}
+
+.player-list {
+  position: relative;
+  width: 500%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 20px;
+  background-color: #cccccc;
+}
+
+.player-list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  white-space: normal;
+  animation: scroll 70s linear infinite;
+  will-change: transform;
+}
+
+.player-list li {
+  display: inline-flex;
+  margin: 10px 20px;
+  background: linear-gradient(to right, #336EFB, #32DBFE);
+  border-radius: 10px;
+  padding: 1px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0;
+  white-space: normal;
+  transition: background 0.3s ease, transform 0.3s ease; /* 添加transform的过渡效果 */
+}
+
+.player-list li:hover {
+  background: linear-gradient(to right, #ff6601, #ff0000);
+  transform: scale(1.5) skew(10deg); /* 添加倾斜效果 */
+  transition: transform 0.3s ease; /* 平滑的过渡效果 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  /* 取消之前的动画，因为我们现在只关心hover效果 */
+}
+
 
 /*---------------------------------------
   SCHEDULE              

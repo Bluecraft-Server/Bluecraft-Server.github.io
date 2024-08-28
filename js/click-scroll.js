@@ -104,29 +104,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
   
-    // 音乐下一首切换
-    nextSongBtn.addEventListener("click", function() {
-        var sources = music.getElementsByTagName("source");
-        var currentSource = music.currentSrc;
-        var nextIndex = Array.from(sources).findIndex(source => source.src === currentSource) + 1;
-        if (nextIndex < sources.length) {
-            music.src = sources[nextIndex].src;
-            music.load();
-            music.play();
-        }
-    });
-  
-    // 音乐上一首切换
-    prevSongBtn.addEventListener("click", function() {
-        var sources = music.getElementsByTagName("source");
-        var currentSource = music.currentSrc;
-        var prevIndex = Array.from(sources).findIndex(source => source.src === currentSource) - 1;
-        if (prevIndex >= 0) {
-            music.src = sources[prevIndex].src;
-            music.load();
-            music.play();
-        }
-    });
+// 音乐下一首切换
+nextSongBtn.addEventListener("click", function() {
+    var sources = music.getElementsByTagName("source");
+    var currentSourceIndex = Array.from(sources).findIndex(source => source.src === music.currentSrc);
+    var nextIndex = (currentSourceIndex + 1) % sources.length;
+    music.src = sources[nextIndex].src;
+    music.load();
+    music.play();
+});
+
+// 音乐上一首切换
+prevSongBtn.addEventListener("click", function() {
+    var sources = music.getElementsByTagName("source");
+    var currentSourceIndex = Array.from(sources).findIndex(source => source.src === music.currentSrc);
+    var prevIndex = (currentSourceIndex - 1 + sources.length) % sources.length;
+    music.src = sources[prevIndex].src;
+    music.load();
+    music.play();
+});
   
     // 监听音乐播放错误
     music.addEventListener('error', function(e) {
