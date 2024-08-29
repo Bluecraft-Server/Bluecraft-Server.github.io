@@ -11,6 +11,7 @@
 // 如果你会前端开发，请加入我们！这对我们有极大的帮助！
 // QQ群：555822991  
 // 老师公益服很累的，我们就讨口饭吃
+// 原生框架真难写
 // 还请高抬贵手，不要DDOS我们，  ~(>_<~)
 // 特别感谢：
 // 盒盒Note_Block
@@ -45,7 +46,7 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+    <link href="css/bluecraft.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -243,7 +244,7 @@
                             <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112881941087221&bvid=BV1PUvxefEEE&cid=500001633990608&p=1&autoplay=0" border="0" allowfullscreen="true"></iframe>
                         </div>
                     </div>
-  
+
 
                 </div>
             </div>
@@ -395,19 +396,19 @@
                         <div class="col-lg-5 col-12">
                             <div class="artists-thumb">
                                 <div class="artists-image-wrap">
-                                    <img src="images/artists/Lylicor.jpg" class="artists-image img-fluid">
+                                    <img src="images/artists/Layaot.jpg" class="artists-image img-fluid">
                                 </div>
 
                                 <div class="artists-hover">
                                     <p>
                                         <strong>昵称:</strong>
-                                        <s title="ta已离开我们,但我们会仍然纪念ta！">Lylicor</s>
+                                        <a>Layaot</a>
                                     </p>
 
                                     <hr>
                                     <p class="mb-0">
                                         <strong>职务:</strong>
-                                        <a>服务器建筑师</a>
+                                        <a>网站设计/管理</a>
                                     </p>
                                 </div>
                             </div>
@@ -714,41 +715,60 @@
                 </div>
             </div>
         </section>
+<!-- 模态框容器 -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title">来自玩家:</h3>
+      <p id="modal-text">这里是模态框的内容。</p>
+    </div>
+  </div>
 
         <section class="pricing-section section-padding visible-xs visible-on-pc" id="section_6">
             <div class="container">
                 <div class="row">
                         <div class="col-12 player-list">
                             <h3 class="text-center mb-5">玩家对我们的评价</h3>
-                            <p class="text-center mb-5">鼠标悬浮在ID上即可看见</p>
+                            <p class="text-center mb-5">点击ID即可看见评论(排名不分先后，第一排是评论了的，后面都是因为收集评论，有事没参与上)</p>
                             <ul class="player-list">
-                                <li>Railroad8620</li>
+                                <li title="是服主啦~(羁绊youso)">Railroad8620</li>
+                                <li title="也是服主啦~">Misaka19090CN</li>
+                                <li title="科技mod超级多，tps不算太稳定">BionicTeio</li>
+                                <li title="好玩，直接玩到爽利辣">FW_Dog_Egg</li>
+                                <li title="服务器环境非常好,大家都挺乐于助人的。">encypt</li>
+                                <li title="好玩滴很那（赞赏），就是有时候会卡爆？还有什么时候加个雾中人和冰与火（">BP</li>
+                                <li title="What can I say gskout , 不知道我这个究极定位是吧😡坐下🤣是骡子是马😡😠遛一溜就知道了 老弟🤣🤣">gsk4130</li>
+                                <li title="Yc是我儿">hsx78987</li>
+                                <li title="Ciallo～(∠・ω< )⌒★">SORASAKI0HINA</li>
                                 <li title="男娘服主">Tendon_Aris</li>
-                                <li>MisFalBeerpig</li>
-                                <li>mhtxswl</li>
-                                <li>gsk4130</li>
-                                <li>Lylicor</li>
-                                <li>XxJizhexX</li>
-                                <li>QiongHuaYiYe</li>
-                                <li>lovetangtang</li>
-                                <li>cai_zi_ya</li>
-                                <li>Stunned_B_Clouds</li>
-                                <li>yvanfang_LYB</li>
-                                <li>hsx78987</li>
-                                <li>lianyu8011</li>
-                                <li>LyricSun9868618</li>
-                                <li>KFACBT</li>
-                                <li>Misaka19090CN</li>
-                                <li>Cyan_flower_</li>
+                                <li title="非常好服务器，使我肝脏旋转，爱来自一个普普通通的模组玩家（什么时候让我夹杂点私货，例如镇守府mod或者命令方块链（））">Oriental_Legend</li>
+                                <li title="(^-^)  好玩 就是有些时候有点小卡 不过没关系">Cyan_flower_</li>
+                                <li title="非常好的服务器 使我的电脑旋转 加七咒">Ushio_Noa_G</li>
+                                <li title="羁绊是个死废材（确信">Suisur0ru</li>
+                                <li title="总体可以，就是有时候ping感人">Freedon_2004</li>
+                                <li title="里面各个都是人才说话又好听，超喜欢在里面的">Folinic__</li>
+                                <li title="人好服好管理好，有萌新陆续的加入真是太好了">AlisDDD</li>
+                                <li title="好 一伯昏">heihei317</li>
+                                <li title="补偿多，好玩，爱玩，就是有时候太卡">fafa</li>
+                                <li title="都挺好的 那个生存区能不能什么怪都刷 我太需要刷女巫了（bushi）">Rainy_cherry</li>
+                                <li title="豪玩，就是不知道该肝什么꒰ঌ(🎀 ᗜ`v´ᗜ 🌸)໒꒱💈✅">junshichunyu</li>
+                                <li title="好玩，虽然好些MOD玩不明白，但还是豪玩🤓👍">SENSEIfromSCHALE</li>
+                                <li title="非常好的服务器，时不时开银趴">nokeya514</li>
+                                <li title="🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌">yucdRPG</li>
+                                <li title="豪玩，后面加一个冰与火之歌就好了">wsx</li>
+                                <li title="玩了这么久了，dddd">aHedwig</li>
+                                <li title="READY TO FIRE!😡FIRE!😡希望加入12榜大炮😋😋😋服务器很好，使我的gt720大战光影😋😋😋
+
+                                READY TO FIRE!😡FIRE!😡希望加入12榜大炮😋😋😋服务器很好，使我的gt720大战光影😋😋😋">win110808</li>
+                                <li title="服主是男娘">Ayanamiii_</li>
+                                <li>The_Yc</li>
                                 <li>ProngLon</li>
                                 <li>Shturman</li>
                                 <li>CGLeueLi_</li>
-                                <li>Suisuroru</li>
                                 <li>Dr_Falling</li>
                                 <li>chang_chun</li>
                                 <li>MieAii</li>
                                 <li>Forever_Millenni</li>
-                                <li>Nokeya514</li>
                                 <li>XY_Size</li>
                                 <li>zaishiwo</li>
                                 <li>KLuoNuoYa</li>
@@ -760,7 +780,6 @@
                                 <li>CasterYuuka_QX</li>
                                 <li>saugd2333</li>
                                 <li>EWQSDAW</li>
-                                <li>Ayanamiii_</li>
                                 <li>HINA_MIYU</li>
                                 <li>BaiZhi7058</li>
                                 <li>yixuel</li>
@@ -777,7 +796,6 @@
                                 <li>yvanfangwLYB</li>
                                 <li>SuperMarimo5355</li>
                                 <li>MGC_bebanHypixel</li>
-                                <li>gsk0314</li>
                                 <li>Aly_Rlyeh</li>
                                 <li>Suisur0ru</li>
                                 <li>LKJ2000_Railway</li>
@@ -788,15 +806,10 @@
                                 <li>Syncyn_R</li>
                                 <li>fkyoufdk</li>
                                 <li>dfghas</li>
-                                <li>The_Yc</li>
                                 <li>shangguang1</li>
                                 <li>Hina_Z1xv0</li>
                                 <li>Hai_LiYu</li>
-                                <li>huayue</li>
-                                <li>Misaka</li>
                                 <li>MaNiuBi</li>
-                                <li>Bluecraft</li>
-                                <li>gsk_4130</li>
                                 <li>Irisplume</li>
                                 <li>Manb</li>
                                 <li>cnmbbbbbbbbbb</li>
@@ -826,11 +839,7 @@
                                 <li>hua__luo</li>
                                 <li>theremable</li>
                                 <li>KFACBT</li>
-                                <li>bdlvl</li>
                                 <li>yucdRPG</li>
-                                <li>big_dick</li>
-                                <li>Zi__Min</li>
-                                <li>bilibili</li>
                                 <li>morningChina4130</li>
                                 <li>Nina</li>
                                 <li>Watson_emir</li>
@@ -876,12 +885,10 @@
                                 <li>yingzhichuan</li>
                                 <li>Yuge</li>
                                 <li>APIHHX</li>
-                                <li>BP</li>
                                 <li>caiyu1116</li>
                                 <li>0Wei0</li>
                                 <li>BenbiBryant</li>
                                 <li>wolvesED</li>
-                                <li>fafa</li>
                                 <li>Denge12345</li>
                                 <li>milkiooo</li>
                                 <li>AAA650</li>
@@ -893,7 +900,6 @@
                                 <li>lujiuyi610</li>
                                 <li>staroffcial</li>
                                 <li>evenfine</li>
-                                <li>encypt</li>
                                 <li>songss_00</li>
                                 <li>momoi_dsk</li>
                                 <li>xiao_E</li>
@@ -1104,7 +1110,8 @@
 
                     <div class="col-lg-12 col-12 order-lg-2 mt-5">
                         <p class="copyright-text" style="color: aqua;">本网站由：羁绊youso\KFACBT\Layaot共同开发！</p>
-                        <p class="copyright-text" style="display: inline;">网站内图片均由 Bluecraft © 2024 版权所有</p>
+                        <a style="color: aliceblue;">本站已运行：</a><span id=span_dt_dt style="color: #ffffff;"></span>
+                        <br><p class="copyright-text" style="display: inline;">网站内图片均由 Bluecraft © 2024 版权所有</p>
                         <a href="https://icp.gov.moe/?keyword=20240742" target="_blank">萌ICP备20240742号</a>
                     </div>
 
@@ -1261,5 +1268,108 @@ ulElement.addEventListener('mouseleave', () => {
   }
 });
       </script>
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var modal = document.getElementById("modal");
+  var modalTitle = document.getElementById("modal-title");
+  var modalText = document.getElementById("modal-text");
+  var close = document.getElementsByClassName("close")[0];
+  var players = document.querySelectorAll('.player-list li');
+
+  // 点击 li 元素显示模态框
+  players.forEach(function(player) {
+    player.addEventListener('click', function() {
+      // 获取 li 元素的文本内容和 title 属性内容
+      var textContent = this.textContent.trim();
+      var titleContent = this.getAttribute('title') || "该玩家并未评价，可能是上学去了~wwwww"; // 如果没有 title 属性，显示“无标题”
+      
+      // 设置模态框的标题为 li 元素的文本内容
+      modalTitle.textContent = "玩家ID: " + textContent;
+      // 设置模态框的文本内容为 li 元素的 title 属性内容
+      modalText.textContent = "评论: " + titleContent;
+
+      // 显示模态框
+      modal.style.display = "block";
+    });
+  });
+
+  // 模态框关闭逻辑
+  close.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // 点击模态框外部区域关闭模态框
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+});
+      </script>
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var lazyImages = [].slice.call(document.querySelectorAll('img[data-src]'));
+  var config = {
+    root: null,  // 观察相对于视口
+    rootMargin: '0px',
+    threshold: 0.1  // 目标元素有10%进入视口时触发
+  };
+
+  var observer = new IntersectionObserver(handleIntersect, config);
+
+  lazyImages.forEach(function(image) {
+    observer.observe(image);
+  });
+
+  function handleIntersect(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+        observer.unobserve(img);  // 加载后停止观察
+      }
+    });
+  }
+});
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+      </script>
+    <script language="javascript">
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    var BirthDay = new Date("August 25, 2024 00:00:00");
+    var today = new Date();
+    var timeold = today.getTime() - BirthDay.getTime();
+    var sectimeold = timeold / 1000; // 总秒数
+    var msPerDay = 24 * 60 * 60 * 1000;
+    var msPerHour = 60 * 60 * 1000;
+
+    // 计算天数
+    var days = Math.floor(timeold / msPerDay);
+    // 计算剩余的毫秒数（减去已经计算过的天数）
+    timeold -= days * msPerDay;
+    var hours = Math.floor(timeold / msPerHour);
+    // 计算剩余的毫秒数（减去已经计算过的小时数）
+    timeold -= hours * msPerHour;
+    var minutes = Math.floor(timeold / (1000 * 60));
+    // 计算剩余的秒数
+    var seconds = Math.floor((timeold % (1000 * 60)) / 1000);
+
+    // 创建运行天数显示的HTML，为每个时间单位单独设置颜色
+    var runtimeDisplay = 
+        '<span style="color: #00fff2;">' + days + '</span> 天 ' +
+        '<span style="color: #00fff2;">' + hours + '</span> 小时 ' +
+        '<span style="color: #00fff2;">' + minutes + '</span> 分 ' +
+        '<span style="color: #00fff2;">' + seconds + '</span> 秒';
+
+    // 设置页面元素的innerHTML
+    document.getElementById("span_dt_dt").innerHTML = runtimeDisplay;
+}
+show_date_time();
+    </script>
 </body>
 </html>

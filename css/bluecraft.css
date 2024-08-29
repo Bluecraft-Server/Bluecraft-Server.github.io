@@ -557,41 +557,14 @@ strong {
   padding: 35px;
 }
 
-
-/*---------------------------------------
-  TICKET               
------------------------------------------*/
-.ticket-section {
-  background-image: url('../images/nicholas-green-unsplash-blur.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 130px;
+img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
-.ticket-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  padding: 50px;
-}
 
-.ticket-form .form-check {
-  position: relative;
-  min-height: 52px;
-  padding-left: 35px;
-}
 
-.ticket-form .form-check .form-check-label {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 12px;
-  margin-left: 35px;
-  width: 100%;
-  height: 100%;
-}
+
 
 
 /*---------------------------------------
@@ -695,7 +668,7 @@ strong {
   background: linear-gradient(to right, #336EFB, #32DBFE);
   border-radius: 10px;
   padding: 1px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
   color: white;
   font-weight: bold;
   flex-shrink: 0;
@@ -712,6 +685,48 @@ strong {
   /* 取消之前的动画，因为我们现在只关心hover效果 */
 }
 
+/* 模态框样式 */
+.modal {
+  display: none; /* 默认不显示 */
+  position: fixed; /* 固定定位 */
+  z-index: 1; /* 确保模态框在最上层 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 宽度为100% */
+  height: 100%; /* 高度为100% */
+  overflow: auto; /* 允许滚动 */
+  background-color: rgba(0,0,0,0.4); /* 背景色 */
+  font-size: 17px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px; /* 最大宽度 */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* 垂直居中 */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*---------------------------------------
   SCHEDULE              
