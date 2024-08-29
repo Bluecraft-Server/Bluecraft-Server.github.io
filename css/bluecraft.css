@@ -558,8 +558,9 @@ strong {
 }
 
 img {
-  -webkit-user-drag: none;
-  user-select: none;
+  -webkit-touch-callout: none; /* 禁止长按操作 */
+  -webkit-user-drag: none;       /* 禁止拖拽 */
+  user-select: none;             /* 防止文本选中 */
 }
 
 
