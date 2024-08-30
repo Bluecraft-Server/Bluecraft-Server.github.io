@@ -45,6 +45,6 @@ else
     visits = parseInt(visits) + 1
 setCookie("counter", visits, now)
 document.write(
-    "<h5 class='text-white'><i class='custom-icon bi-person me-2'></i>您是第</h5>"
+    "<h5 class='text-white'><i class='custom-icon bi-person me-2'></i>您是第"
     + "<span style='color: var(--secondary-color)'>"
-    + visits + "</span>" + "<h5 class='text-white'>位访问的老师！</h5>")
+    + visits + "</span>" + "位访问的老师！</h5>")
