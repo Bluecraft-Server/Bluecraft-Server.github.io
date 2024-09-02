@@ -1,151 +1,150 @@
 .nextaudio {
-  position: relative;
-  background-color: transparent
+    position: relative;
+    background-color: transparent
 }
 
 #next-song {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 #prev-song {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 #audio-control {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 /* 当屏幕宽度小于等于767px（移动设备）时，强制使.col-12变成双列布局 */
 @media (max-width: 767px) {
-.artists-section .row > .col-12 {
-    flex: 0 0 50%; /* 设置为占50%宽度 */
-    max-width: 50%;
-}
+    .artists-section .row > .col-12 {
+        flex: 0 0 50%; /* 设置为占50%宽度 */
+        max-width: 50%;
+    }
 }
 
 .logo-image {
-height: auto;
-max-height: 200px;
-width: 100%;
+    height: auto;
+    max-height: 200px;
+    width: 100%;
 }
-
 
 
 .middle {
-margin:0;
-padding:0;
-position: absolute;
-top:50%;
-transform: translateY(-50%);
-width: 98%;
-text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 98%;
+    text-align: center;
 }
 
 .btg {
-display:inline-block;
-width:60px;
-height: 60px;
-background: #f1f1f1;
-margin: 10px;
-border-radius: 30%;
-box-shadow:-5px 5px 15px -5px #f1f1f1; 
-overflow: hidden;
-position: relative;
-transition: 0.3s linear;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: -5px 5px 15px -5px #f1f1f1;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s linear;
 }
 
 .btg i {
-line-height: 60px;
-font-size: 26px;
-transition: 0.3s linear;
+    line-height: 60px;
+    font-size: 26px;
+    transition: 0.3s linear;
 }
 
 .btg:nth-child(1) i {
-color:#FFC0CB;
+    color: #FFC0CB;
 }
 
 .btg:nth-child(2) i {
-color:#1da1f2;
+    color: #1da1f2;
 }
 
 .btg:nth-child(3) i {
-color:#00dbff
+    color: #00dbff
 }
 
 .btg:nth-child(4) i {
-color:#0228ff
+    color: #0228ff
 }
 
 .btg:hover {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .btg:hover i {
-transform: scale(1.2);
-color: #fff;
+    transform: scale(1.2);
+    color: #fff;
 }
 
 .btg:before {
-content:"";
-position:absolute;
-width:120%;
-height:120%;
-transform: rotate(45deg);
-left: -110%;
-top:90%;
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
 }
 
 .btg:nth-child(1)::before {
-background: #FFC0CB;
+    background: #FFC0CB;
 }
 
 .btg:nth-child(2)::before {
-background: #1da1f2;
+    background: #1da1f2;
 }
 
 .btg:nth-child(3)::before {
-background: #00dbff
+    background: #00dbff
 }
 
 .btg:nth-child(4)::before {
-background: #0228ff
+    background: #0228ff
 }
 
 
 .btg:hover::before {
-animation: aaa 0.7s 1;
-top: -10%;
-left: -10%;
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
 }
 
 @keyframes aaa {
-0% {
-  left: -110%;
-  top:90%;
-}
-50% {
-  left:10%;
-  top: -30%;
-}
-100% {
-  left: -10%;
-  top: -10%;
-}
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
+    }
 }
 
 .about-text-wrap iframe {
-width: 100%;
-height: 80%;
+    width: 100%;
+    height: 80%;
 }
 
-.music-status{
-height: 3.233rem;
-margin-bottom: 1.3333rem;
+.music-status {
+    height: 3.233rem;
+    margin-bottom: 1.3333rem;
 }
 
-.pwdmzcomputegmbh-1 img{
-height: 100%;
+.pwdmzcomputegmbh-1 img {
+    height: 100%;
 }
