@@ -7,8 +7,6 @@
     margin: auto; /* 在水平方向自动调整外边距，实现居中 */
 }
 
-/* 其他样式保持不变 */
-
 .carousel .slides {
     display: flex;
     padding: 0;
@@ -49,7 +47,7 @@
 }
 
 .carousel .nav-dots .dot a.active::before {
-    background: rgba(0, 0, 0, 0.6);
+    background: lightskyblue; /* 选中时的颜色 */
 }
 
 .carousel .nav-arrows {
