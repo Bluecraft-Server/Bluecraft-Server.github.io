@@ -1,4 +1,5 @@
 var caution = false
+
 function setCookie(name, value, expires, path, domain, secure) {
     var curCookie = name + "=" + escape(value) +
         ((expires) ? "; expires=" + expires.toGMTString() : "") +
@@ -7,10 +8,10 @@ function setCookie(name, value, expires, path, domain, secure) {
         ((secure) ? "; secure" : "")
     if (!caution || (name + "=" + escape(value)).length <= 4000)
         document.cookie = curCookie
-    else
-    if (confirm("Cookie exceeds 4KB and will be cut!"))
+    else if (confirm("Cookie exceeds 4KB and will be cut!"))
         document.cookie = curCookie
 }
+
 function getCookie(name) {
     var prefix = name + "="
     var cookieStartIndex = document.cookie.indexOf(prefix)
@@ -21,6 +22,7 @@ function getCookie(name) {
         cookieEndIndex = document.cookie.length
     return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
 }
+
 function deleteCookie(name, path, domain) {
     if (getCookie(name)) {
         document.cookie = name + "=" +
@@ -29,12 +31,14 @@ function deleteCookie(name, path, domain) {
             "; expires=Thu, 01-Jan-70 00:00:01 GMT"
     }
 }
+
 function fixDate(date) {
     var base = new Date(0)
     var skew = base.getTime()
     if (skew > 0)
         date.setTime(date.getTime() - skew)
 }
+
 var now = new Date()
 fixDate(now)
 now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
