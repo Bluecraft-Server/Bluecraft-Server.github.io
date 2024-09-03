@@ -14,11 +14,11 @@
     <link href="./images/logo.ico" rel="icon">
     <link href="css/404button.css" rel="stylesheet"/>
     <script type="text/javascript">
-        var system = {};
-        var p = navigator.platform;
-        system.win = p.indexOf("Win") == 0;
-        system.mac = p.indexOf("Mac") == 0;
-        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        const system = {};
+        const p = navigator.platform;
+        system.win = p.indexOf("Win") === 0;
+        system.mac = p.indexOf("Mac") === 0;
+        system.x11 = (p === "X11") || (p.indexOf("Linux") === 0);
         if (system.win || system.mac || system.xll) {//如果是电脑跳转到
             window.location.href = "#";
         } else {  //如果是手机,跳转到
@@ -39,7 +39,7 @@
 </style>
 <script>
     function playVideoSound() {
-        var videoElement = document.getElementById('hiddenVideo');
+        const videoElement = document.getElementById('hiddenVideo');
         if (videoElement.paused || videoElement.ended) {
             videoElement.currentTime = 0; // 重置播放时间以便重新播放
             videoElement.play(); // 播放视频
@@ -51,7 +51,7 @@
 <body>
 
 <div class="logo" id="a" onclick="playVideoSound();" title="点击我有惊喜！">
-    <img src="images/arona_wuwu.png">
+    <img alt="" src="images/arona_wuwu.png">
     <!-- 隐藏的视频元素 -->
     <video class="hidden-video" id="hiddenVideo" preload="auto" src="/video/easteregg.mp4"></video>
 
@@ -64,23 +64,6 @@
 <div class="box bg-1">
     <button class="button button--antiman button--round-l button--text-medium" onclick="window.open('./index.html')">
         <span>返回首页</span></button>
-</div>
-</div>
-<div class="body_buttom">
-
-    <audio autoplay id="music" loop>
-        <source src="music/music.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        function a() {
-            var audio = document.getElementById('music');
-            if (audio.paused) {
-                audio.play();//audio.play();// 播放
-            } else {
-                audio.pause();// 暂停
-            }
-        }
-    </script>
 </div>
 </body>
 </html>
