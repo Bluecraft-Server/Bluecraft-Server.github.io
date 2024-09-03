@@ -47,7 +47,7 @@
 }
 
 .carousel .nav-dots .dot a.active::before {
-    background: lightskyblue; /* 选中时的颜色 */
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .carousel .nav-arrows {
