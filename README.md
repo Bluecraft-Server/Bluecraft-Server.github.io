@@ -12,9 +12,9 @@ This is the web source build repository for the **Bluecraft server**.
 
 You can view our latest changes here.
 
-请 **下载** 或 **克隆** 存储库以便在本地部署。
+请 **下载** 或 **克隆** 存储库以便在本地部署此项目。
 
-Please **download** or **clone** the repository to deploy locally.
+Please **download** or **clone** the repository to deploy this project locally.
 
 ---
 
