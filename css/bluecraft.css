@@ -349,7 +349,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding-top: 12px;
     padding-bottom: 12px;
 }
@@ -366,8 +366,9 @@ strong {
     margin-top: 40px;
 }
 
-.sticky-wrapper.is-sticky .navbar {
-    background-color: #666666;
+.sticky-wrapper.is-sticky .navbar .container {
+    background-color: rgba(102, 102, 102, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -383,7 +384,7 @@ strong {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    border-radius: var(--border-radius-large);
+    font-size: 20px;
     margin: 10px;
     padding: 10px 1px;
 }
@@ -401,6 +402,13 @@ strong {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.navbar-nav .ban-player .nav-link.active,
+.navbar-nav .ban-player .nav-link:hover
+{
+    color: var(--link-hover-color);
 }
 
 .navbar-toggler {
@@ -1062,10 +1070,6 @@ img {
     .section-padding {
         padding-top: 50px;
         padding-bottom: 50px;
-    }
-
-    .navbar {
-        background-color: var(--dark-color);
     }
 
     .navbar-expand-lg .navbar-nav {
