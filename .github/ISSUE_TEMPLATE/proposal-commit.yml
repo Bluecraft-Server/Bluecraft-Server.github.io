@@ -1,0 +1,24 @@
+name: 提交建议
+description: 如果你对网页有什么建议，可以在这里进行提交。
+labels: [ "enhancement" ]
+body:
+  - type: checkboxes
+    id: "yml-0"
+    attributes:
+      label: "检查项"
+      description: "请逐个检查下列项目，并勾选确认。"
+      options:
+        - label: "我确认在Issues中并无其他相同建议"
+          required: true
+  - type: textarea
+    id: "yml-1"
+    attributes:
+      label: 你希望的功能
+      placeholder: "-（请在这里回答）-"
+    validations:
+      required: true
+  - type: textarea
+    id: "yml-2"
+    attributes:
+      label: 其他补充内容
+      placeholder: "-（请在这里回答）-"
