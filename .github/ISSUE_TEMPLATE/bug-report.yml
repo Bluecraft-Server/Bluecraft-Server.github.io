@@ -1,0 +1,55 @@
+name: BUG反馈
+description: 如果你觉得网页的某一部分工作异常，请在这里提交。
+labels: [ "bug" ]
+body:
+  - type: checkboxes
+    id: "yml-0"
+    attributes:
+      label: "检查项"
+      description: "请逐个检查下列项目，并勾选确认。"
+      options:
+        - label: "我确认在Issues中并无其他相同或类似问题"
+          required: true
+  - type: textarea
+    id: "yml-1"
+    attributes:
+      label: 提供问题的描述
+      placeholder: "-（请在这里回答）-"
+    validations:
+      required: true
+  - type: textarea
+    id: "yml-2"
+    attributes:
+      label: 期望的结果
+      placeholder: "-（请在这里回答）-"
+    validations:
+      required: true
+  - type: textarea
+    id: "yml-3"
+    attributes:
+      label: 如何重现（若知道）
+      placeholder: "-（请在这里回答）-"
+  - type: textarea
+    id: "yml-4"
+    attributes:
+      label: 系统环境
+      placeholder: "例如：Windows 7 64位 SP1、Windows 10 专业版 64位 1909、Windows 10 家庭版 32位 2002"
+    validations:
+      required: true
+  - type: textarea
+    id: "yml-5"
+    attributes:
+      label: 浏览器信息
+      placeholder: "-（请在这里回答）-"
+    validations:
+      required: true
+  - type: textarea
+    id: "yml-6"
+    attributes:
+      label: 错误相关图片（若有）
+      placeholder: "-（请在这里上传文件）-"
+  - type: textarea
+    id: "yml-7"
+    attributes:
+      label: 其他补充内容
+      placeholder: "-（请在这里回答）-"
