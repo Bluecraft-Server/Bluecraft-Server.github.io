@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="这里是Bluecraft服务器的官网哟！" name="description">
+    <meta content="Bluecraft管理组" name="author">
+    <title>欢迎来到Bluecraft!</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="./images/logo.ico" rel="icon">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bluecraft.css" rel="stylesheet">
+    <link href="css/range.css" rel="stylesheet">
+    <style>
+        .sticky-wrapper {
+            position: initial;
+            top: initial;
+            right: initial;
+            left: initial;
+            margin-top: initial;
+        }
+
+        .sticky-wrapper.is-sticky .navbar {
+            background-color: initial;
+        }
+
+        .modal{
+            z-index: 100;
+
+            padding-top: 25%;
+        }
+
+        .modal-backdrop {
+            z-index: 90; /* 确保遮罩层的 z-index 低于模态框 */
+        }
+
+        .ban-list{
+            margin-top: 50px;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+        }
+
+        .ban-list li{
+            margin-right: 30px;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background: rgba(178, 39, 39, 0.9);
+            color: white;
+            border-radius: var(--border-radius-small);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .ban-list li:hover {
+            background: rgba(101, 22, 22, 1);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container bg-dark rounded-5">
+        <a class="navbar-brand" href="index.html">
+            <img alt="" class="logo-image" src="./images/BluecraftLogo.svg">
+        </a>
+
+        <a class="btn custom-btn d-lg-none ms-auto me-4"
+           href="https://qm.qq.com/cgi-bin/qm/qr?k=Bj137bEZihI3Bt1LpopIG0ZwvwWbBA7r&jump_from=webapi&authKey=tRbFjScgGBaj5GoFt5/I0Z4fhw885oAq8GPoQ6+ZhnNnXb1i5QRmc5Cg6cZ0mTXo">点我入群</a>
+
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5 text-center">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="index.html">主页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="index.html#section_2">关于</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="index.html#section_3">玩家建筑</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="index.html#section_4">管理委员会</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="index.html#section_5">服务器类型</a>
+                </li>
+                <li class="nav-item">
+                    <span class="ban-player"><a class="nav-link click-scroll" href="ban-players.html">封禁名单</a></span>
+                </li>
+            </ul>
+
+            <a class="btn custom-btn d-lg-block d-none"
+               href="https://qm.qq.com/cgi-bin/qm/qr?k=Bj137bEZihI3Bt1LpopIG0ZwvwWbBA7r&jump_from=webapi&authKey=tRbFjScgGBaj5GoFt5/I0Z4fhw885oAq8GPoQ6+ZhnNnXb1i5QRmc5Cg6cZ0mTXo"
+               target="_blank">加入</a>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container mt-5">
+    <h2 class="border-bottom">封禁名单</h2>
+    <ul class="ban-list" id="bannedList">
+        <!-- 用户列表会在这里生成 -->
+    </ul>
+</div>
+
+<!-- 模态框 -->
+<div class="modal" id="userModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">被封禁用户信息</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>用户名:</strong> <span id="userName"></span></p>
+                <p><strong>封禁理由:</strong> <span id="banReason"></span></p>
+                <p><strong>封禁者:</strong> <span id="bannedBy"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 示例数据
+    const bannedUsers = [
+        { name: "用户1", reason: "违规行为", bannedBy: "管理员A" },
+        { name: "用户2", reason: "恶意评论", bannedBy: "管理员B" },
+        { name: "用户3", reason: "账户盗用", bannedBy: "管理员C" },
+    ];
+
+    // 生成用户列表
+    const bannedList = document.getElementById('bannedList');
+    bannedUsers.forEach(user => {
+        const listItem = document.createElement('li');
+        listItem.textContent = user.name;
+        listItem.style.cursor = 'pointer';
+        listItem.onclick = () => showModal(user);
+        bannedList.appendChild(listItem);
+    });
+
+    // 显示模态框
+    function showModal(user) {
+        document.getElementById('userName').textContent = user.name;
+        document.getElementById('banReason').textContent = user.reason;
+        document.getElementById('bannedBy').textContent = user.bannedBy;
+        $('#userModal').modal('show');
+    }
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script>
+    $('.navbar-nav .nav-item .nav-link').eq(5).addClass('active').removeClass('inactive');
+</script>
+</body>
+</html>
