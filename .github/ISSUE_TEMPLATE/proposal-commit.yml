@@ -20,10 +20,5 @@ body:
   - type: textarea
     id: "yml-2"
     attributes:
-      label: 您使用的下载器版本
-      placeholder: "-（请在这里回答）-"
-  - type: textarea
-    id: "yml-3"
-    attributes:
       label: 其他补充内容
       placeholder: "-（请在这里回答）-"
