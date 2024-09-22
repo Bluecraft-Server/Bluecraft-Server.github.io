@@ -8,7 +8,7 @@ body:
       label: "检查项"
       description: "请逐个检查下列项目，并勾选确认。"
       options:
-        - label: "我确认在Issues中并无其他相同建议"
+        - label: "我确认在Issues中并无其他相同或类似建议"
           required: true
   - type: textarea
     id: "yml-1"
