@@ -26,7 +26,7 @@
             background-color: initial;
         }
 
-        .modal{
+        .modal {
             z-index: 100;
 
             padding-top: 25%;
@@ -36,7 +36,7 @@
             z-index: 90; /* 确保遮罩层的 z-index 低于模态框 */
         }
 
-        .ban-list{
+        .ban-list {
             margin-top: 50px;
             list-style-type: none;
             display: flex;
@@ -45,7 +45,7 @@
             white-space: normal;
         }
 
-        .ban-list li{
+        .ban-list li {
             margin-right: 30px;
             margin-bottom: 15px;
             padding: 10px 20px;
@@ -103,7 +103,8 @@
                     <a class="nav-link click-scroll" href="index.html#section_5">服务器类型</a>
                 </li>
                 <li class="nav-item">
-                    <span class="ban-player"><a class="nav-link click-scroll" href="ban-players.html">封禁名单</a></span>
+                    <span class="ban-player"><a class="nav-link click-scroll"
+                                                href="ban-players.html">封禁名单</a></span>
                 </li>
             </ul>
 
@@ -115,7 +116,6 @@
 </nav>
 
 
-
 <div class="container mt-5">
     <h2 class="border-bottom">封禁名单</h2>
     <ul class="ban-list" id="bannedList">
@@ -124,12 +124,12 @@
 </div>
 
 <!-- 模态框 -->
-<div class="modal" id="userModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+<div aria-hidden="true" aria-labelledby="modalLabel" class="modal" id="userModal" role="dialog" tabindex="-1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalLabel">被封禁用户信息</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                <button class="btn-close" data-bs-dismiss="modal" type="button">
                 </button>
             </div>
             <div class="modal-body">
@@ -144,9 +144,9 @@
 <script>
     // 示例数据
     const bannedUsers = [
-        { name: "用户1", reason: "违规行为", bannedBy: "管理员A" },
-        { name: "用户2", reason: "恶意评论", bannedBy: "管理员B" },
-        { name: "用户3", reason: "账户盗用", bannedBy: "管理员C" },
+        {name: "用户1", reason: "违规行为", bannedBy: "管理员A"},
+        {name: "用户2", reason: "恶意评论", bannedBy: "管理员B"},
+        {name: "用户3", reason: "账户盗用", bannedBy: "管理员C"},
     ];
 
     // 生成用户列表
