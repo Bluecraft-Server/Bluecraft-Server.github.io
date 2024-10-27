@@ -49,7 +49,7 @@ https://templatemo.com/tm-583-festava-live
 
 body {
     background-color: var(--white-color);
-    font-family: var(--body-font-family);
+    font-family: var(--body-font-family), sans-serif;
 }
 
 
