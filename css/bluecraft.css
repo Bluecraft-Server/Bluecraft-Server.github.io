@@ -411,8 +411,7 @@ strong {
 }
 
 .navbar-nav .ban-player .nav-link.active,
-.navbar-nav .ban-player .nav-link:hover
-{
+.navbar-nav .ban-player .nav-link:hover {
     color: var(--link-hover-color);
 }
 
