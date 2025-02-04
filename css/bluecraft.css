@@ -840,21 +840,27 @@ img {
 }
 
 .pricing-list {
-    column-count: 2;
-    padding-left: 20px;
+    column-count: 0;
+    padding-left: 0; /* 移除默认左padding */
+    margin: 0 auto;  /* 水平居中 */
+    width: fit-content; /* 根据内容自动调整宽度 */
+    list-style-position: inside; /* 项目符号在内容区域内 */
+    text-align: center; /* 保持整个列表居中 */
 }
+
 
 .pricing-list-item {
     line-height: normal;
     margin-right: 10px;
     margin-bottom: 10px;
+    text-align: left; /* 列表项文字左对齐 */
 }
 
 .pricing-tag {
     background-color: rgba(109, 109, 109, 0.3);
     background-size: cover;
     border-radius: var(--border-radius-large);
-    color: rgb(255, 217, 3);
+    color: rgb(255, 89, 0);
     font-weight: var(--font-weight-bold);
     text-align: center;
     display: flex;

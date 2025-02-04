@@ -189,7 +189,7 @@ h6 {
 }
 
 p {
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 1rem
 }
 
@@ -8626,11 +8626,11 @@ fieldset:disabled .btn {
 }
 
 .mt-3 {
-    margin-top: 1rem !important
+    margin-top: 1rem !important;
 }
 
 .mt-4 {
-    margin-top: 1.5rem !important
+    margin-top: 1.5rem !important;
 }
 
 .mt-5 {
