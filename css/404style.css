@@ -1,129 +1,290 @@
-﻿/*大佬们-大神们，不要喷我
- 小白们-新手们，不懂的先问百度，百度实在找不到问我谢谢
- QQ202800100*/
+﻿:root {
+	box-sizing: border-box;
+	cursor: default;
+}
+
+::selection {
+	color: #11111b;
+	background-color: #00D7FB; /* 如果你也想修改这个颜色，可以改成 #00D7FB */
+}
+
+html,
 body {
-    margin: 0;
-    background: url(../images/bg.jpg) no-repeat center center fixed;
-    background-size: cover;
-    width: 100%;
-    min-height: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: #11111b;
+	color: #00D7FB; /* 修改为淡蓝色 */
+	font-size: calc(6.4px + 0.8125vw);
 }
 
-.container p {
-    text-align: center;
-    padding: 10px auto;
-    font-size: 30px;
-    color: darksalmon;
-
+.error-body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
-.beat-char {
-    line-height: 3.4em;
-    position: relative;
-    display: inline-block;
-    background: transparent;
-
+.error-body:before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00D7FB; /* 修改为淡蓝色 */
+	mix-blend-mode: overlay;
+	z-index: 1;
 }
 
-.rotate {
-    transform: rotate(360deg);
-    -ms-transform: rotate(360deg); /* IE 9 */
-    -moz-transform: rotate(360deg); /* Firefox */
-    -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
-    -o-transform: rotate(360deg);
-    -webkit-transition-duration: 0.7s;
-
+.error-body:after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #11111b 21px, transparent 1%) center, linear-gradient(#11111b 21px, transparent 1%) center, white;
+	background-size: 22px 22px;
+	background-position: center;
+	opacity: .2;
+	z-index: 1;
 }
 
-.logo {
-    width: 200px;
-    height: 200px;
-    margin: 120px auto 0px;
-    border-radius: 200px;
-    border: 5px solid;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    transition: 1s all;
+.error-body .background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	filter: grayscale(1);
+	mix-blend-mode: luminosity;
 }
 
-.logo img {
-    width: 200px;
-    height: 200px;
-    margin: 0px auto 0px;
-    background: #fff;
-    border-radius: 200px;
+.error-body .message {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 3;
 }
 
-.logo:hover {
-    transform: rotate(360deg);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+.error-body .message h1 {
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	width: 100%;
+	font-size: 10em;
+	margin: 0;
+	animation: shake 600ms ease-in-out infinite alternate;
+	text-shadow: 0 0 0.07em #00D7FB, -0.2em 0 2em rgba(0, 215, 251, 0.3), 0.2em 0 2em rgba(0, 215, 251, 0.3); /* 修改为淡蓝色 */
+	user-select: none;
 }
 
-.body_buttom {
-    width: 100%;
-    height: 290px;
-    position: fixed;
-    bottom: 0px;
-    background: rgba(255, 255, 255, 0.3);
+.error-body .message h1:before {
+	content: attr(t);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0.34em);
+	height: .1em;
+	line-height: .5em;
+	width: 100%;
+	animation: scan 500ms ease-in-out infinite alternate 360ms, glitch-anim 300ms ease-in-out infinite alternate;
+	overflow: hidden;
+	opacity: .7;
 }
 
-.body_buttom_a {
-    float: left;
+.error-body .message h1:after {
+	content: attr(t);
+	position: absolute;
+	top: -23px;
+	left: 50%;
+	transform: translate(-50%, 0.34em);
+	height: .5em;
+	line-height: .1em;
+	width: 100%;
+	animation: scan 665ms ease-in-out infinite alternate 448ms, glitch-anim 300ms ease-in-out infinite alternate;
+	overflow: hidden;
+	opacity: .8;
 }
 
-a {
-    margin-left: 60px;
-    text-decoration: none;
-    padding: 20px 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    transition: 1s all;
-    color: hotpink;
+.error-body .message .bottom {
+	position: absolute;
+	top: 65%;
+	left: 0;
+	width: 100%;
 }
 
-a:hover {
-    color: black;
-    background: rgba(255, 255, 255, 0.6);
-    transition: 1s all;
+.error-body .message p,
+.error-body .message a {
+	font-size: 2em;
+	font-family: monospace;
+	text-shadow: 0 0 5px #00D7FB; /* 修改为淡蓝色 */
+	filter: blur(0.8px);
 }
 
-.body_buttom_r {
-    float: right;
+.error-body .message a {
+	position: relative;
+	color: #00D7FB; /* 修改为淡蓝色 */
+	text-decoration: none;
+	font-weight: 700;
+	border: 2px solid #00D7FB; /* 修改为淡蓝色 */
+	text-transform: uppercase;
+	padding: 5px 30px;
+	box-shadow: inset 0 0 0 0 rgba(0, 215, 251, 0.2); /* 修改为淡蓝色 */
+	transition: 25ms ease-in-out all 0ms;
+	overflow: hidden;
+	animation: attn 3s ease-in-out infinite;
 }
 
-.body_buttom_yq {
-    margin-left: 460px;
-    margin-top: 10px;
-    color: #81C300;
+.error-body .message a:hover {
+	cursor: crosshair;
+	box-shadow: inset 0 -2em 0 0 rgba(0, 215, 251, 0.2); /* 修改为淡蓝色 */
+	transition: 225ms ease-in-out all 225ms;
+	animation: none;
 }
 
-.body_buttom_r_gg {
-    width: 550px;
-    height: 290px;
-    background: rgba(255, 55, 55, 0.1);
-    border-radius: 25px;
-    margin-right: 70px;
-    align-content: center;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+.error-body .message a:hover:before,
+.error-body .message a:hover:after {
+	transform: translate(-50%, 0) scale(0, 1);
 }
 
-.gg_gg {
-    color: #FF69B4;
-
+.error-body .message a:active {
+	box-shadow: inset 0 -2em 0 0 rgba(0, 215, 251, 0.5); /* 修改为淡蓝色 */
+	transition: 225ms ease-in-out all 225ms;
 }
 
-.gg_font {
-    color: #982E4B;
+.error-body .message a:before,
+.error-body .message a:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0) scale(1, 1);
+	transform-origin: center;
+	background-color: #11111b;
+	width: 90%;
+	height: 5px;
+	transition: 225ms ease-in-out all;
+	mix-blend-mode: hard-light;
 }
 
-.gg_font2 {
-    color: #ED553B;
+.error-body .message a:before {
+	top: -4px;
 }
 
-.gg_font3 {
-    color: chocolate;
+.error-body .message a:after {
+	bottom: -4px;
 }
 
-.gg_sj {
-    font-size: 40px;
-    color: red;
+@keyframes scan {
+	from,
+	20%,
+	100% {
+		height: 0;
+		transform: translate(-50%, 0.44em);
+	}
+
+	10%,
+	15% {
+		height: 1em;
+		line-height: .2em;
+		transform: translate(-55%, 0.26em);
+	}
+}
+
+@keyframes pulse {
+	from {
+		text-shadow: 0 0 0 #00D7FB, 0 0 0 rgba(0, 215, 251, 0.3), 0 0 0 rgba(0, 215, 251, 0.3); /* 修改为淡蓝色 */
+	}
+
+	to {
+		text-shadow: 0 0 0.07em #00D7FB, -0.2em 0 2em rgba(0, 215, 251, 0.3), 0.2em 0 2em rgba(0, 215, 251, 0.3); /* 修改为淡蓝色 */
+	}
+}
+
+@keyframes attn {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	30%,
+	35% {
+		opacity: .4;
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translate(-1px, 0);
+	}
+
+	10% {
+		transform: translate(2px, 1px);
+	}
+
+	30% {
+		transform: translate(-3px, 2px);
+	}
+
+	35% {
+		transform: translate(2px, -3px) skewY(-8deg) scale(0.96, 1);
+		filter: blur(4px);
+	}
+
+	45% {
+		transform: translate(2px, 2px) skewY(-8deg) scale(0.96, 1);
+		filter: blur(0);
+	}
+
+	50% {
+		transform: translate(-3px, 1px);
+	}
+}
+
+@keyframes glitch-anim {
+	0% {
+		clip: rect(31px, 9999px, 12px, 0);
+	}
+
+	10% {
+		clip: rect(73px, 9999px, 86px, 0);
+	}
+
+	20% {
+		clip: rect(11px, 9999px, 89px, 0);
+	}
+
+	30% {
+		clip: rect(74px, 9999px, 36px, 0);
+	}
+
+	40% {
+		clip: rect(90px, 9999px, 48px, 0);
+	}
+
+	50% {
+		clip: rect(44px, 9999px, 25px, 0);
+	}
+
+	60% {
+		clip: rect(52px, 9999px, 53px, 0);
+	}
+
+	70% {
+		clip: rect(6px, 9999px, 85px, 0);
+	}
+
+	80% {
+		clip: rect(93px, 9999px, 6px, 0);
+	}
+
+	90% {
+		clip: rect(93px, 9999px, 3px, 0);
+	}
+
+	100% {
+		clip: rect(15px, 9999px, 4px, 0);
+	}
 }
