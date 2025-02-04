@@ -629,7 +629,7 @@ img {
 }
 
 .artists-hover hr {
-    margin: 1.5rem 0;
+    margin: 0.3333rem 0; /* 2025/02/04 - Changed by MZCompute GmbH. */
     color: var(--white-color);
 }
 
