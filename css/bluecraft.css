@@ -1154,3 +1154,47 @@ img {
     text-align: center;
 }
 
+
+
+
+.mod-release-section {
+    background: #ffffff; /* 白色背景 */
+}
+
+.mod-card {
+    background: #f3f3f3; /* 淡灰色背景 */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mod-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mod-image-wrap img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mod-image-wrap img:hover {
+    transform: scale(1.1);
+}
+
+.mod-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.mod-content h3 {
+    color: #4e95ff; /* 蓝绿色标题 */
+    margin-top: 0;
+}
+
+.mod-content p.mod-description {
+    color: #818181; /* 灰色描述文字 */
+    margin-bottom: 20px;
+}

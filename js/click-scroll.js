@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.getElementById("bg-music").addEventListener('play', () => {
-    document.querySelector("#music-status").src = "/images/music_play.png"
+    document.querySelector("#music-status").src = "./images/music_pause.png";
 });
 document.getElementById("bg-music").addEventListener('pause', () => {
-    document.querySelector("#music-status").src = "/images/music_pause.png"
+    document.querySelector("#music-status").src = "./images/music_play.png";
 });
 console.log("[MusicBtn] Init\nPowered by MZCompute GmbH [wang@mingze.de]")
