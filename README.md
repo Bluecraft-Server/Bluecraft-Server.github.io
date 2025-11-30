@@ -18,4 +18,4 @@ Please **download** or **clone** the repository to deploy this project locally.
 
 ---
 
-Copyright ©️ 2024 Bluecraft Server. All rights reserved.
+Copyright ©️ 2025 Bluecraft Server. All rights reserved.
